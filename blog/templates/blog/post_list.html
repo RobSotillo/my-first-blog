@@ -10,5 +10,18 @@
     <h1>Hello from your new Django Site!</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, reiciendis.</p>
 
+
+    
+    {% for post in posts %}
+        <div>
+            <h2>{{ post.title }}</h2>
+            <h3>published: {{ post.published_date }}</h3>
+            <h3>Author: {{ post.author }}</h3>
+            <p> {{ post.text }}</p>
+
+            <br>
+        </div>
+    {% endfor %}
+
 </body>
 </html>
