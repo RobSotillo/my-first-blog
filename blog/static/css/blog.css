@@ -1,0 +1,44 @@
+
+body {
+    padding: 0;
+}
+#head {
+    color: orange;
+    font-size: 4rem;
+}
+
+.page-header {
+    background-color: orange;
+    border: 100px;
+    margin: 0;
+    padding: 0;
+    width: calc(100vw - 12px);
+    display: inline-block;
+}
+#title {
+    padding-left: 15px;
+}
+.post-header * {
+    display: inline-block;
+    
+}
+#spacer {
+    width: 40vw;
+    display: inline-block;
+}
+
+
+
+
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
