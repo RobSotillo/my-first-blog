@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <h3>Author: {{ post.author }}</h3>
+            <h4>created: {{ post.created_date|date:'d-m-y' }}</h3>
+            <p> {{ post.text|truncatechars:200 }}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}">More Detail</a>
+            <br><br>
+        </div>
+    {% endfor %}
+{% endblock %}

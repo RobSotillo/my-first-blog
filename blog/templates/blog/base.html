@@ -13,9 +13,21 @@
     <div class="page-header">
         <h1 id="title"><a href="/">Robs Blogs</a></h1>
         {% if user.is_authenticated %}
+        <span>
+            <span id="spacer2"></span>
             <a href="{% url 'post_new' %}" class="top-menu">
                 <span>&#43; New Post</span>
             </a>
+            <span id="spacer2"></span>
+            <a href="{% url 'post_draft_list' %}" class="top-menu">
+                <span>View Draft Posts</span>
+            </a>
+            <span id="spacer2"></span>
+            <p id="salutation" class="top-menu">Hello {{ user.username }} <small><a href="{% url 'logout' %}">Log Out</a></small></p>
+        </span>
+        {% else %}
+            <span id="spacer2"></span>
+            <a id="salutation" href="{% url 'login' %}" class="top-menu">login</a>
         {% endif %}
     </div>
     <div class="content container">
